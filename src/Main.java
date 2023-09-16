@@ -1,4 +1,6 @@
 import carrinho.CarrinhoDeCompras;
+import livro.CatalogoLivros;
+import livro.Livro;
 import tarefas.ListaTarefas;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -6,19 +8,18 @@ import tarefas.ListaTarefas;
 public class Main {
     public static void main(String[] args) {
 
-        CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+        CatalogoLivros catalogo = new CatalogoLivros();
 
-        carrinho.adicionarItem("celular", 2000.0, 3);
-        carrinho.adicionarItem("computador", 3500.0, 2);
-        carrinho.adicionarItem("tv", 2500.0, 1);
 
-        carrinho.exibirItens();
+        catalogo.adicionarLivro("Algoritmos", "Andre", 2030);
+        catalogo.adicionarLivro("Redes", "Andre Jonas", 2034);
+        catalogo.adicionarLivro("Banco de dados", "Jonas", 2037);
 
-        carrinho.removerItem("tv");
+        System.out.println(catalogo.pesquisarIntervalo(2031, 2036));
+        System.out.println(catalogo.pesquisarIntervalo(2031, 2037));
 
-        carrinho.exibirItens();
-
-        System.out.println(carrinho.valorTotal());
+        System.out.println(catalogo.pesquisarPorAutor("andre"));
+        System.out.println(catalogo.pesquisarPorTitulo("Redes"));
 
     }
 }
