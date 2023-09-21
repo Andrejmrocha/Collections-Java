@@ -1,7 +1,4 @@
-import carrinho.CarrinhoDeCompras;
-import livro.CatalogoLivros;
-import livro.Livro;
-import tarefas.ListaTarefas;
+import list.livro.CatalogoLivros;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
